@@ -5,7 +5,7 @@ import React, { Component } from "react";
 class Table extends Component {
   render() {
     return (
-      <table className="table table-hover">
+      <table className="table table-hover" id="myTable">
         <thead className="thead-dark">
           <tr>
             <th scope="col" className="text-center">
@@ -84,20 +84,6 @@ class Table extends Component {
       </table>
     );
   }
-  sortTypes = {
-    up: {
-      class: "sort-up",
-      fn: (a, b) => a.Name - b.Name
-    },
-    down: {
-      class: "sort-down",
-      fn: (a, b) => a.Name - b.Name
-    },
-    default: {
-      class: "sort",
-      fn: (a, b) => a
-    }
-  };
 }
 
 export default Table;
